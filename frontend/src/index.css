@@ -1,0 +1,12 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+.button-bg {
+  background-color: #8e43e7;
+  }
+
+  body {
+    font-family: 'Jost', sans-serif;
+  }
+  

@@ -1,0 +1,15 @@
+# Node.js and npm
+node_modules/
+npm-debug.log
+
+# React
+/build/
+
+# Django
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.db
+*.sqlite3
+*.log
