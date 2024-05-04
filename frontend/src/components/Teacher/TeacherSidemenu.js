@@ -9,7 +9,7 @@ import { RiLogoutCircleLine } from "react-icons/ri";
 import { MdOutlineBarChart } from "react-icons/md";
 import { IoAnalytics } from "react-icons/io5";
 
-function Sidemenu() {
+const TeacherSidemenu = () => {
     const [open, setOpen] = useState(true);
     const navigate = useNavigate();
 
@@ -31,7 +31,7 @@ function Sidemenu() {
            border-2 rounded-full  ${!open && "rotate-180"}`}
           onClick={() => setOpen(!open)}
         />
-        <div className="mt-2 mb-4 flex flex-col h-full">
+        <div className="mt-2 mb-4 flex flex-col h-full font-sans">
           <div className="border-b border-gray-600 pb-2">
             <img
               src="../image/logo.png"
@@ -40,11 +40,11 @@ function Sidemenu() {
               } mx-auto`}
             />
             <h1
-              className={`text-white origin-left font-medium text-xl duration-200 ${
+              className={`text-white  font-medium text-2xl ${
                 !open && "scale-0"
               } ml-2 text-center`}
             >
-              Student Dashboard
+              EduMesh
             </h1>
           </div>
           <ul className="pt-6 flex-grow px-2">
@@ -104,4 +104,4 @@ function Sidemenu() {
   )
 }
 
-export default Sidemenu
+export default TeacherSidemenu

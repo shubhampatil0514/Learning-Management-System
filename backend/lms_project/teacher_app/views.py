@@ -69,3 +69,20 @@ def create_lecture(request, teacher_email):
         return Response(serializer.data, status=status.HTTP_201_CREATED)
 
     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
+@api_view(['GET'])
+def get_all_lectures(request):
+    # Fetch all lectures
+    lectures = Lecture.objects.all()
+    
+    # Serialize the lectures
+    serializer = LectureSerializer(lectures, many=True)
+
+    return Response(serializer.data, status=status.HTTP_200_OK)
+
+@api_view(['GET'])
+@permission_classes([AllowAny])
+def total_teachers(request):
+    total_teachers = CustomTeacher.objects.count()
+    return Response({'total_teachers': total_teachers})

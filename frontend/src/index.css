@@ -10,3 +10,49 @@
     font-family: 'Jost', sans-serif;
   }
   
+
+/* CalendarStyles.css */
+
+.react-calendar {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.react-calendar__tile {
+  border-radius: 8px;
+}
+
+.react-calendar__tile--now {
+  background-color: #ff0000 !important;
+  color: #fff !important;
+}
+
+.react-calendar__tile--active {
+  background-color: #3b72f0 !important;
+  color: #fff !important;
+}
+
+.react-calendar__navigation {
+  background-color: #bc5090;
+  border-radius: 8px 8px 0 0;
+}
+
+/* LectureList */
+.leche {
+  height: 600px; /* Set your desired custom height */
+  overflow-y: auto; /* Add this if you want a scrollbar when content overflows */
+}
+
+.formheight {
+  height: 600px;
+}
+.lectureheight{
+  height: 480px;
+  width: 300px;
+  overflow-y: auto; 
+}
+.quizeheight{
+  height: 480px;
+  width: 300px;
+  overflow-y: auto; 
+}

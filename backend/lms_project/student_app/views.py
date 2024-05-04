@@ -52,3 +52,9 @@ def get_student_details(request, student_id):
 
     serializer = StudentDetailSerializer(student)
     return Response(serializer.data)
+
+@api_view(['GET'])
+@permission_classes([AllowAny])
+def total_students(request):
+    total_students = CustomStudent.objects.count()
+    return Response({'total_students': total_students})

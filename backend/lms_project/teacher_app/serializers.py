@@ -41,4 +41,4 @@ class TeachertDetailSerializer(serializers.ModelSerializer):
 class LectureSerializer(serializers.ModelSerializer):
     class Meta:
         model = Lecture
-        fields = [  'title', 'description', 'date', 'time']
+        fields = [ 'id', 'title', 'description', 'date', 'time']

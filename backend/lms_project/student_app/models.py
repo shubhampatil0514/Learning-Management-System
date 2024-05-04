@@ -27,6 +27,7 @@ class CustomStudent(AbstractBaseUser, PermissionsMixin):
     profile_img = models.ImageField(upload_to='student_profile/', default="")
     is_active = models.BooleanField(default=True)
     is_staff = models.BooleanField(default=False)
+    quiz_results = models.PositiveIntegerField(default=0)
 
     objects = CustomStudentManager()
     groups = models.ManyToManyField(
@@ -49,7 +50,7 @@ class CustomStudent(AbstractBaseUser, PermissionsMixin):
         return self.email
 
 class CustomStudentBackend(ModelBackend):
-    def authenticate(self, request, email=None, password=None, **kwargs):
+    def authenticate(self, request=None, email=None, password=None, **kwargs):
         try:
             user = CustomStudent.objects.get(email=email)
         except CustomStudent.DoesNotExist:
